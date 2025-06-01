@@ -59,7 +59,7 @@ sup {
     position: absolute;
     top: 15%;
     background: #000;
-    color: #000;
+    color: #fff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -259,4 +259,39 @@ header.scrolled {
 .header .user-box.active {
     transform: scale(1.0);
     transition: .2s Linear;
+}
+
+/* Media Screen */
+
+@media (max-width: 991px) {
+    #menu-btn {
+        display: block;
+    }
+    .header .flex .navbar {
+        position: absolute;
+        width: 100%;
+        padding: 0 2rem;
+        top: 130%;
+        left: 0;
+        display: block;
+        right: 0;
+        border-top: 1px solid var(--green);
+        background: #fff;
+        transition: .3s ease;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);        
+    }
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+        border-top: 1px solid var(--green);
+    }
+    .form-container {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
 }

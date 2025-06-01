@@ -1,4 +1,4 @@
-<header>
+<header class="header">
     <div class="flex">
         <a href="home.php" class="logo"><img src="img/logo.jpg"></a>
         <nav class="navbar">
@@ -15,8 +15,8 @@
             <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
         </div>
         <div class="user-box">
-            <p>username : <span><?php echo $_SESSION['user_name']; ?></span></p>
-            <p>Email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+            <p>username : <span><?php //echo $_SESSION['user_name']; ?></span></p>
+            <p>Email : <span><?php //echo $_SESSION['user_email']; ?></span></p>
             <a href="login.php" class="btn">Entrar</a>
             <a href="register.php" class="btn">Registrar</a>
             <form method="post">
