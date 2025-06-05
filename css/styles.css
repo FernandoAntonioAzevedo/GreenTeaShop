@@ -261,6 +261,13 @@ header.scrolled {
     transition: .2s Linear;
 }
 
+/* Section footer */
+.top-footer {
+    width: 100%;
+    background: var(--green);
+    padding: 1rem;
+}
+
 /* Media Screen */
 
 @media (max-width: 991px) {
@@ -286,7 +293,7 @@ header.scrolled {
     .header .flex .navbar a {
         display: block;
         margin: 2rem;
-        border-top: 1px solid var(--green);
+        
     }
     .form-container {
         width: 100%;
