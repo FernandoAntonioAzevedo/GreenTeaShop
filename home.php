@@ -16,6 +16,9 @@
 </head>
 <body>
     <?php include 'components/header.php'; ?>
+    <div class="main">
+        <?php include 'components/footer.php'; ?>
+    </div>
     <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="js/script.js"></script>
     <?php include 'components/alert.php'; ?>
