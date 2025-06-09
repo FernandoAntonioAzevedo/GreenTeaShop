@@ -18,7 +18,8 @@
     <?php include 'components/header.php'; ?>
     <div class="main">
         <?php include 'components/footer.php'; ?>
-        <div class="home-section">
+        <section class="home-section">
+            <div class="slider">
             <div class="slider__slider slide1">
                 <div class="overlay"></div>
                 <div class="slide-detail">
@@ -77,6 +78,8 @@
             <div class="left-arrow"><i class="bx bxs-left-arrow"></i></div>   
             <div class="right-arrow"><i class="bx bxs-right-arrow"></i></div>   
         </div>
+      
+        </section>  
         <!-- Fim Home slider  -->
     </div>
     <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
