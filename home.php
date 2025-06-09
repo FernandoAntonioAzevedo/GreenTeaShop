@@ -18,6 +18,66 @@
     <?php include 'components/header.php'; ?>
     <div class="main">
         <?php include 'components/footer.php'; ?>
+        <div class="home-section">
+            <div class="slider__slider slide1">
+                <div class="overlay"></div>
+                <div class="slide-detail">
+                    <h1>Lorem consectetur elit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <a href="view_products.php" class="btn">Comprar agora</a>
+                </div>
+                <div class="hero-dec-top"></div>
+                <div class="hero-dec-bottom"></div>
+            </div>
+            <!-- Fim Slide  -->
+            <div class="slider__slider slide2">
+                <div class="overlay"></div>
+                <div class="slide-detail">
+                    <h1>Bem vindo a minha lojaa</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <a href="view_products.php" class="btn">Comprar agora</a>
+                </div>
+                <div class="hero-dec-top"></div>
+                <div class="hero-dec-bottom"></div>
+            </div>
+            <!-- Fim Slide  --> 
+            <div class="slider__slider slide3">
+                <div class="overlay"></div>
+                <div class="slide-detail">
+                    <h1>Lorem consectetur elit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <a href="view_products.php" class="btn">Comprar agora</a>
+                </div>
+                <div class="hero-dec-top"></div>
+                <div class="hero-dec-bottom"></div>
+            </div>
+            <!-- Fim Slide  -->
+            <div class="slider__slider slide4">
+                <div class="overlay"></div>
+                <div class="slide-detail">
+                    <h1>Lorem consectetur elit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <a href="view_products.php" class="btn">Comprar agora</a>
+                </div>
+                <div class="hero-dec-top"></div>
+                <div class="hero-dec-bottom"></div>
+            </div>
+            <!-- Fim Slide  -->
+             <div class="slider__slider slide5">
+                <div class="overlay"></div>
+                <div class="slide-detail">
+                    <h1>Lorem consectetur elit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <a href="view_products.php" class="btn">Comprar agora</a>
+                </div>
+                <div class="hero-dec-top"></div>
+                <div class="hero-dec-bottom"></div>
+            </div>
+            <!-- Fim Slide  -->
+            <div class="left-arrow"><i class="bx bxs-left-arrow"></i></div>   
+            <div class="right-arrow"><i class="bx bxs-right-arrow"></i></div>   
+        </div>
+        <!-- Fim Home slider  -->
     </div>
     <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="js/script.js"></script>
