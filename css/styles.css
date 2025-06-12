@@ -330,7 +330,7 @@ header.scrolled {
 }
 
 .slide1 {
-    background-image: url('img/.slider.jpg');
+    background-image: url('img/slider.jpg');
 }
 
 .slide2 {
@@ -357,15 +357,17 @@ header.scrolled {
     font-size: 1rem;
     width: 40px;
     height: 40px;
+    line-height: 40px;
     border-radius: 50%;
     background: var(--light-green);
     box-shadow: 0 0 0 6px rgb(255 255 255 / 40%);
     z-index: 2;
     cursor: pointer;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
 .right-arrow {
@@ -382,6 +384,18 @@ header.scrolled {
     left: 5%;
     width: 100px;
     height: 100px;
+}
+
+.hero-dec-top {
+    top: 4%;
+    border-left: 2px solid #e2e2e255; 
+    border-top: 2px solid #e2e2e255; 
+}
+
+.hero-dec-bottom {
+    bottom: 5%;
+    border-left: 2px solid #e2e2e255; 
+    border-bottom: 2px solid #e2e2e255;
 }
 
 /* Section footer */

@@ -16,15 +16,14 @@
 </head>
 <body>
     <?php include 'components/header.php'; ?>
-    <div class="main">
-        <?php include 'components/footer.php'; ?>
+    <div class="main">        
         <section class="home-section">
             <div class="slider">
             <div class="slider__slider slide1">
                 <div class="overlay"></div>
                 <div class="slide-detail">
-                    <h1>Lorem consectetur elit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <h1>Green Renovations</h1>
+                    <p>Esse chá é conhecido por seus benefícios à saúde, incluindo propriedades antioxidantes, anti-inflamatórias <br>e termogênicas. </p>
                     <a href="view_products.php" class="btn">Comprar agora</a>
                 </div>
                 <div class="hero-dec-top"></div>
@@ -74,13 +73,21 @@
                 <div class="hero-dec-top"></div>
                 <div class="hero-dec-bottom"></div>
             </div>
-            <!-- Fim Slide  -->
+            <!-- Fim Slide  -->             
             <div class="left-arrow"><i class="bx bxs-left-arrow"></i></div>   
             <div class="right-arrow"><i class="bx bxs-right-arrow"></i></div>   
-        </div>
-      
-        </section>  
-        <!-- Fim Home slider  -->
+        </div>      
+      </section>
+      <!-- Fim Home slider  -->
+      <section class="thumb">
+          <div class="box-container">
+              <div class="box">
+                  <img src="img/thumb2.jpg" alt="">
+                  <h3>green tea</h3>  
+              </div>  
+          </div>  
+      </section> 
+      <?php include 'components/footer.php'; ?>        
     </div>
     <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="js/script.js"></script>
