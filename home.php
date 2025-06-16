@@ -117,11 +117,54 @@
                </div>
                <div class="box">
                    <img src="img/download.png" alt=""> 
-                   <span>Healthy tea</span>
-                   <h1>save up tp 50% off</h1>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste qui dolorum?</p>
+                   <span>Chá revitalizador</span>
+                   <h2>Adquira com até 50% de desconto!</h2>
+                   <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   </p>
                </div> 
           </div>  
+      </section>
+      <section class="shop">        
+        <div class="title">
+            <img src="img/download.png" alt="">
+            <h1>Produtos em Alta</h1>
+        </div>
+        <div class="row">
+            <img src="img/about.jpg" alt="">
+            <div class="row-detail">    
+                <img src="img/basil.jpg" alt="">
+                <div class="top-footer">
+                    <h1>a cup of green tea makes you healthy</h1>
+                </div>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/card.jpg" alt="">
+                <a href="view_products.php">Comprar agora</a>
+            </div>
+            <div class="box">
+                <img src="img/card0.jpg" alt="">
+                <a href="view_products.php">Comprar agora</a>
+            </div>
+            <div class="box">
+                <img src="img/card1.jpg" alt="">
+                <a href="view_products.php">Comprar agora</a>
+            </div>
+            <div class="box">
+                <img src="img/card2.jpg" alt="">
+                <a href="view_products.php">Comprar agora</a>
+            </div>
+            <div class="box">
+                <img src="img/10.jpg" alt="">
+                <a href="view_products.php">Comprar agora</a>
+            </div>
+            <div class="box">
+                <img src="img/6.webp" alt="">
+                <a href="view_products.php">Comprar agora</a>
+            </div>
+        </div>
       </section> 
       <?php include 'components/footer.php'; ?>        
     </div>
