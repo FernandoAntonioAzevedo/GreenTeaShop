@@ -27,7 +27,7 @@ body {
 }
 
 .main {
-    width: 85vw;
+    width: 90vw;
     background: #fff;
     box-shadow: 0 2px 6px 0 rgb(0, 0, 0 / 10%);
     margin: 1rem auto;
@@ -173,8 +173,8 @@ button {
 header {
     position: fixed;
     top: 5%;
-    left: 7%;
-    width: 85vw;
+    left: 4.5%;
+    width: 90vw;
     padding: 1rem;
     z-index: 101;
     transition: .3s;
@@ -458,7 +458,18 @@ header.scrolled {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
+
+.box-container .box-about {
+    margin-left: 2rem;    
+}
+
+.box-container .box-about img {
+    width: 25rem;
+}
+
+
 
 .container .box span {
     color: var(--green);
@@ -494,14 +505,15 @@ header.scrolled {
 }
 
 .shop .box-container {
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 }
 
 .shop .box-container .box {
-    margin: 1rem;
+    margin: 2rem;
     box-shadow: var(--box-shadow);
     position: relative;
     background-color: #fff;
+    
 }
 
 .shop .box-container img {
@@ -513,6 +525,56 @@ header.scrolled {
     left: 30%;
     bottom: -3%;
 }
+
+.shop-category .box {
+    position: relative;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.shop-category .detail {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    line-height: 2;
+    text-align: center;
+}
+
+.shop-category .detail h1 {
+    font-size: 2em;
+}
+.shop-category .detail span {
+    font-size: 1.3rem;
+}
+
+.services {
+    padding: 3rem 0;
+    text-align: center;
+    background-image: url('img/bg.jpg');
+    line-height: 2;
+    margin: 3rem 0;
+}
+
+.services h3 {
+    text-transform: capitalize;
+    color: var(--green);
+}
+
+.services img {
+    width: 30%;
+}
+
+.brand {
+    margin: 2rem auto;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.brand img {
+    width: 40%;
+}
+
+
 
 /* Section footer */
 .top-footer {
@@ -537,7 +599,7 @@ header.scrolled {
 footer {
     background-image: url('img/0.webp');
     width: 100%;
-    min-height: 73vh;
+    min-height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -556,7 +618,7 @@ footer .overlay {
 
 .footer-content {
    position: absolute;
-   top: 10%;        
+   top: 15%;        
 }
 
 .footer-content .img-box {
@@ -626,7 +688,7 @@ footer .inner-footer .card .social-links i:hover {
 footer .bottom-footer {
     text-transform: capitalize;
     text-align: center;
-    padding: 3rem 0;
+    padding: 9rem 0;
     color: #fff;
     padding-bottom: 1rem;
 }
