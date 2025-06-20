@@ -150,8 +150,8 @@
                         nostrum blanditiis!
                       </p>                      
                   </div>
-                  <div class="left-arrow" onclick="nextSlide()"><i class="bx bxs-left-arrow-alt"></i></div>  
-                  <div class="right-arrow" onclick="prevSlide()"><i class="bx bxs-right-arrow-alt"></i></div>  
+                  <div onclick="nextSlide()" class="left-arrow"><i class="bx bxs-left-arrow-alt"></i></div>  
+                  <div onclick="prevSlide()" class="right-arrow"><i class="bx bxs-right-arrow-alt"></i></div>  
               </div>  
             
       </div>        
@@ -160,6 +160,22 @@
     </div>
     <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript">
+        let slides = document.querySelectorAll('.testimonial-item');
+        let index = 0;
+
+        function nextSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active';)
+        }
+
+        function prevSlide() {
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
     <?php include 'components/alert.php'; ?>
 </body>
 </html>    
