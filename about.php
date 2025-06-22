@@ -21,7 +21,7 @@
             <h1>Sobre nós</h1>
         </div>
         <div class="title2">
-            <a href="home.php">Início </a><span>Sobre</span>
+            <a href="home.php">Início / </a><span>Sobre</span>
         </div>
         <div class="about-category">
             <div class="box">
