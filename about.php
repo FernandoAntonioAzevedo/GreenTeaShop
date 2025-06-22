@@ -1,5 +1,17 @@
 <?php  
     include 'components/connection.php';
+    session_start();
+    if (isset($_SESSION['user_id'])) {
+        $user_id = $_SESSION['user_id'];
+    }else {
+        $user_id = '';
+    }
+
+
+    if (isset($_POST['logout'])) {
+        session_destroy();
+        header("location: login.php");
+    }
 ?>
 
 <style type="text/css">
@@ -161,13 +173,16 @@
     <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript">
+
+        /* testimonials slider */
+
         let slides = document.querySelectorAll('.testimonial-item');
         let index = 0;
 
         function nextSlide() {
             slides[index].classList.remove('active');
             index = (index + 1) % slides.length;
-            slides[index].classList.add('active';)
+            slides[index].classList.add('active');
         }
 
         function prevSlide() {
@@ -175,7 +190,8 @@
             index = (index - 1 + slides.length) % slides.length;
             slides[index].classList.add('active');
         }
-    </script>
+    </script>    
+
     <?php include 'components/alert.php'; ?>
 </body>
 </html>    
