@@ -8,20 +8,16 @@
         $user_id = '';
     }
 
-    //Registrar usuário
+    //Login de usuário
     if (isset($_POST['submit'])) {
-        $id = unique_id();
-        $name = $_POST['name'];
-        $name = htmlspecialchars(trim($_POST['name']), ENT_QUOTES, 'UTF-8');
+        
         $email = $_POST['email'];
         $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
         $pass = $_POST['pass'];
-        $pass = htmlspecialchars(trim($_POST['pass']), ENT_QUOTES, 'UTF-8');
-        $cpass = $_POST['cpass'];
-        $cpass = htmlspecialchars(trim($_POST['cpass']), ENT_QUOTES, 'UTF-8');
+        $pass = htmlspecialchars(trim($_POST['pass']), ENT_QUOTES, 'UTF-8');        
 
-        $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
-        $select_user->execute([$email]);
+        $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
+        $select_user->execute([$email, $pass]);
         $row = $select_user->fetch(PDO::FETCH_ASSOC);
 
         if ($select_user->rowCount() > 0) {
@@ -37,10 +33,14 @@
                 $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
                 $select_user->execute([$email, $pass]);
                 $row = $select_user->fetch(PDO::FETCH_ASSOC);
+                
                 if ($select_user->rowCount() > 0) {
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['user_name'] = $row['name'];
                     $_SESSION['user_email'] = $row['email'];
+                    header('location: home.php');
+                }else {
+                    $message[] = 'incorrect userrname or password';
                 }
             }
         }
@@ -56,23 +56,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Tea - Registrar agora</title>
+    <title>Green Tea - Entrar</title>
 </head>
 <body>
     <div class="main-container">
         <section class="form-container">
             <div class="title">
                 <img src="img/download.png" alt="">
-                <h1>Registrar agora</h1>
+                <h1>Entrar agora</h1>
                 <p>
                     Para ter acesso a função de compra na loja é necessário efetuar seu cadastro.
                 </p>
             </div>
             <form action="" method="post">
-                 <div class="input-field">
-                    <p>Seu nome *</p>
-                    <input type="text" name="name" required placeholder="Insira seu nome" maxlength="50">                    
-                 </div>
+                 
                  <div class="input-field">
                     <p>Seu e-mail *</p>
                     <input type="email" name="email" required placeholder="Insira seu e-mail" maxlength="50" 
@@ -83,13 +80,9 @@
                     <input type="password" name="pass" required placeholder="Insira sua senha" maxlength="50"
                     oninput="this.value = this.value.replace(/\s/g, '')">                    
                  </div>
-                 <div class="input-field">
-                    <p>Confirme sua senha *</p>
-                    <input type="password" name="cpass" required placeholder="Confirme sua senha" maxlength="50"
-                    oninput="this.value = this.value.replace(/\s/g, '')">                    
-                 </div>
-                 <input type="submit" name="submit" value="registrar agora" class="btn">
-                 <p>já possui uma conta? <a href="login.php">Entrar agora</a></p>
+                 
+                 <input type="submit" name="submit" value="Entrar" class="btn">
+                 <p>ainda não tem uma conta? <a href="register.php">Registre-se</a></p>
             </form>
         </section>
     </div>

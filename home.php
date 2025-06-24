@@ -45,8 +45,8 @@
             <div class="slider__slider slide2">
                 <div class="overlay"></div>
                 <div class="slide-detail">
-                    <h1>Bem vindo a minha lojaa</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <h1>Green Sensations</h1>
+                    <p>Esse chá é conhecido por suas propriedades antioxidantes, anti-inflamatórias e sensação revigorante após o consumo.</p>
                     <a href="view_products.php" class="btn">Comprar agora</a>
                 </div>
                 <div class="hero-dec-top"></div>
@@ -56,8 +56,8 @@
             <div class="slider__slider slide3">
                 <div class="overlay"></div>
                 <div class="slide-detail">
-                    <h1>Lorem consectetur elit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <h1>Green Renovations</h1>
+                    <p>Esse chá é conhecido por seus benefícios à saúde, incluindo propriedades antioxidantes, anti-inflamatórias <br>e termogênicas.</p>
                     <a href="view_products.php" class="btn">Comprar agora</a>
                 </div>
                 <div class="hero-dec-top"></div>
@@ -67,8 +67,8 @@
             <div class="slider__slider slide4">
                 <div class="overlay"></div>
                 <div class="slide-detail">
-                    <h1>Lorem consectetur elit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <h1>Green Sensations</h1>
+                    <p>Esse chá é conhecido por suas propriedades antioxidantes, anti-inflamatórias e sensação revigorante após o consumo.</p>
                     <a href="view_products.php" class="btn">Comprar agora</a>
                 </div>
                 <div class="hero-dec-top"></div>
@@ -78,8 +78,8 @@
              <div class="slider__slider slide5">
                 <div class="overlay"></div>
                 <div class="slide-detail">
-                    <h1>Lorem consectetur elit.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa, lendus eaque.</p>
+                    <h1>Green Renovations</h1>
+                    <p>Esse chá é conhecido por seus benefícios à saúde, incluindo propriedades antioxidantes, anti-inflamatórias <br>e termogênicas.</p>
                     <a href="view_products.php" class="btn">Comprar agora</a>
                 </div>
                 <div class="hero-dec-top"></div>

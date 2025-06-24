@@ -144,7 +144,7 @@ button {
 }
 
 .banner {
-    background-image: url('img/banner.jpg');
+    background-image: url('img/9.jpg');
     background-size: cover;
     background-position: center;
     background-color: var(--green);
@@ -154,6 +154,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .banner h1 {
