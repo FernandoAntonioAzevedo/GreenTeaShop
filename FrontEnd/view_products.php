@@ -36,7 +36,13 @@
         <div class="title2">
             <a href="home.php">Início / </a><span>Produtos</span>
         </div>
-
+        <section class="products">
+            <div class="box-container">
+                <?php
+                     $select_products = $conn->prepare("SELECT * FROM `products`")   
+                ?>
+            </div>
+        </section>
         
          
       <?php include 'components/footer.php'; ?>        
