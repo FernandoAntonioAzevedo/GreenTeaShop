@@ -62,7 +62,9 @@
     <div class="main-container">
         <section class="form-container">
             <div class="title">
-                <img src="img/download.png" alt="">
+                <a href="home.php">
+                  <img src="img/logo.jpg" alt="">
+                </a>
                 <h1>Registrar agora</h1>
                 <p>
                     Para ter acesso a função de compra na loja é necessário efetuar seu cadastro.
