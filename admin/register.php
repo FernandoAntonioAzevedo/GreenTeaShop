@@ -5,20 +5,16 @@ if (isset($_POST['register'])) {
 
     $id = unique_id();
 
-    // Sanitização segura dos campos
     $name = htmlspecialchars(trim($_POST['name']), ENT_QUOTES, 'UTF-8');
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
 
-    // Hash seguro da senha
-    $pass_raw = $_POST['password'];
-    $cpass_raw = $_POST['cpassword'];
-    $pass = password_hash($pass_raw, PASSWORD_DEFAULT);
+    $pass_raw = trim($_POST['password']);
+    $cpass_raw = trim($_POST['cpassword']);
+    $pass = $pass_raw; // Sem criptografia
 
-    // Verificação de senha igual
     if ($pass_raw !== $cpass_raw) {
         $warning_msg[] = 'Confirmação de senha incorreta.';
     } else {
-        // Validação da imagem
         if (
             isset($_FILES['image']) &&
             is_array($_FILES['image']) &&
@@ -29,41 +25,38 @@ if (isset($_POST['register'])) {
             $image_size = $_FILES['image']['size'];
             $image_ext = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
             $allowed_ext = ['jpg', 'jpeg', 'png', 'webp'];
-            $max_size = 2 * 1024 * 1024; // 2MB
+            $max_size = 2 * 1024 * 1024;
 
             if (!in_array($image_ext, $allowed_ext)) {
-                $warning_msg[] = 'Formato de imagem inválido. Use JPG, JPEG, PNG ou WEBP.';
+                $warning_msg[] = 'Formato de imagem inválido.';
             } elseif ($image_size > $max_size) {
-                $warning_msg[] = 'A imagem excede o tamanho máximo de 2MB.';
+                $warning_msg[] = 'Imagem muito grande (máx. 2MB).';
             } else {
-                // Nome de imagem único
                 $unique_image_name = uniqid('img_', true) . '.' . $image_ext;
                 $image = htmlspecialchars($unique_image_name, ENT_QUOTES, 'UTF-8');
                 $image_folder = '../image/' . $image;
 
-                // Verifica se já existe admin com o mesmo email
                 $select_admin = $conn->prepare("SELECT * FROM `admin` WHERE email = ?");
                 $select_admin->execute([$email]);
 
                 if ($select_admin->rowCount() > 0) {
                     $warning_msg[] = 'Email já cadastrado.';
                 } else {
-                    // Inserção segura
                     $insert_admin = $conn->prepare("INSERT INTO `admin` (id, name, email, password, profile) VALUES (?, ?, ?, ?, ?)");
                     $insert_admin->execute([$id, $name, $email, $pass, $image]);
 
-                    // Move o arquivo de imagem
                     move_uploaded_file($image_tmp_name, $image_folder);
 
                     $success_msg[] = 'Registro concluído com sucesso!';
                 }
             }
         } else {
-            $warning_msg[] = 'Selecione uma imagem de perfil válida.';
+            $warning_msg[] = 'Selecione uma imagem válida.';
         }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

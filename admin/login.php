@@ -1,36 +1,34 @@
 <?php
-    include 'components/connection.php';
+include 'components/connection.php';
 
-    session_start();
+session_start();
 
-    if (isset($_POST['login'])) {
-        $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-        $password = $_POST['password'];
+if (isset($_POST['login'])) {
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $password = trim($_POST['password']);
 
-        // Verifica se existe admin com esse e-mail
-        $select_admin = $conn->prepare("SELECT * FROM `admin` WHERE email = ?");
-        $select_admin->execute([$email]);
+    $select_admin = $conn->prepare("SELECT * FROM `admin` WHERE email = ?");
+    $select_admin->execute([$email]);
 
-        if ($select_admin->rowCount() > 0) {
-            $admin = $select_admin->fetch(PDO::FETCH_ASSOC);
+    if ($select_admin->rowCount() > 0) {
+        $admin = $select_admin->fetch(PDO::FETCH_ASSOC);
 
-            // Verifica a senha usando password_verify
-            if (password_verify($password, $admin['password'])) {
-                // Autenticação bem-sucedida
-                $_SESSION['admin_id'] = $admin['id'];
-                $_SESSION['admin_name'] = $admin['name'];
-                $_SESSION['admin_email'] = $admin['email'];
+        // Comparação direta (sem hash)
+        if ($password === $admin['password']) {
+            $_SESSION['admin_id'] = $admin['id'];
+            $_SESSION['admin_name'] = $admin['name'];
+            $_SESSION['admin_email'] = $admin['email'];
 
-                $success_msg[] = 'Login realizado com sucesso!';
-                header('location: dashboard.php'); // redireciona para painel (ajuste conforme necessário)
-                exit;
-            } else {
-                $warning_msg[] = 'Senha incorreta.';
-            }
+            $success_msg[] = 'Login realizado com sucesso!';
+            header('location: dashboard.php');
+            exit;
         } else {
-            $warning_msg[] = 'Email não cadastrado.';
+            $warning_msg[] = 'Senha incorreta.';
         }
+    } else {
+        $warning_msg[] = 'Email ou senha inválidos.';
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -72,8 +70,12 @@
     </section>
 </div>
 
+<!-- SweetAlert -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 <script src="../js/script.js"></script>
+
+<!-- Alertas PHP -->
 <?php include '../admin/components/alert.php'; ?>
+
 </body>
 </html>
