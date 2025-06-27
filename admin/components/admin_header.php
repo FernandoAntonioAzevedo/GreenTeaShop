@@ -2,10 +2,10 @@
     <div class="flex">
         <a href="dashboard.php" class="logo"><img src="../FrontEnd/img/logo.jpg" alt=""></a>
         <nav class="navbar">
-            <a href="dashboard.php">dashboard</a>
-            <a href="add_product.php">add product</a>
-            <a href="view_product.php">view product</a>
-            <a href="accounts.php">accounts</a>
+            <a href="dashboard.php">Painel Controle</a>
+            <a href="add_product.php">add produto</a>
+            <a href="view_product.php">visualizar produto</a>
+            <a href="accounts.php">Conta</a>
         </nav>
         <div class="icons">
             <i class="bx bxs-user" id="user-btn"></i>
@@ -21,7 +21,14 @@
                 
             ?>
             <div class="profile">
-                <img src="../image/<?= $fetch_profile['profile']; ?>">    
+                <img src="../image/<?= $fetch_profile['profile']; ?>" class="logo-img">
+                <p><?= $fetch_profile['name']; ?></p>    
+            </div>
+            <div class="flex-btn">
+                <a href="profile.php"  class="btn">perfil</a>
+                <a href="..components/admin_logout.php" 
+                onclick="return confirm('logout from this website');"  
+                class="btn">sair</a>
             </div>
             <?php 
                  }
