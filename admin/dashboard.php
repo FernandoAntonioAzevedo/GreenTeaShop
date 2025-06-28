@@ -29,10 +29,10 @@
             <h1>Painel de Controle</h1>
         </div>
         <div class="title2">
-            <a href="dasboard.php">home / </a><span>Painel de controle</span>
+            <a href="dasboard.php">Admin / </a><span>Painel de controle</span>
         </div>
         <section class="dashboard">
-            <h1 class="heading">painel de controle</h1>
+            <h1 class="heading">Gerenciador</h1>
             <div class="box-container">
                 <div class="box">
                     <h3>Seja bem vindo(a)!</h3>

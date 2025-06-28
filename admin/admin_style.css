@@ -146,6 +146,7 @@ form h3 {
     padding: 2rem;
     position: relative;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 textarea {
@@ -310,6 +311,65 @@ header.scrolled a:hover {
 .flex-btn {
     display: flex;
     justify-content: space-evenly;
+}
+
+.banner {
+    background-image: url('../FrontEnd/img/5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--green);
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-btn .btn {
+    margin: .5rem;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 3rem;
+}
+
+.title2 {
+    border-top: 1px solid var(--green);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    box-shadow: var(--box-shadow);
+}
+
+.title2 a {
+    color: var(--green);
+}
+
+.dashboard .box-container .box {
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.dashboard h1 {
+    margin-top: -5rem;
+}
+
+.dashboard .box-container .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard .box-container .box p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+    color: #555;
 }
 
 /* Media Screen */

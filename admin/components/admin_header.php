@@ -2,9 +2,9 @@
     <div class="flex">
         <a href="dashboard.php" class="logo"><img src="../FrontEnd/img/logo.jpg" alt=""></a>
         <nav class="navbar">
-            <a href="dashboard.php">Painel Controle</a>
-            <a href="add_product.php">add produto</a>
-            <a href="view_product.php">visualizar produto</a>
+            <a href="dashboard.php">Painel de Controle</a>
+            <a href="add_products.php">add produtos</a>
+            <a href="view_product.php">visualizar produtos</a>
             <a href="accounts.php">Conta</a>
         </nav>
         <div class="icons">
