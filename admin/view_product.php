@@ -41,22 +41,37 @@
                     if ($select_products->rowCount() > 0) {
                         while ($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)) 
                         {
-
                     
                 ?>
                 <form action="" method="post" class="box">
                     <input type="hidden" name="product_id" value="<?= $fetch_products['id']; 
                         ?>">
                     <?php if ($fetch_products['image'] != ''){ ?>
-                        <img src="../image/<?= $fetch_products['id']; ?>">
-                    <?php } ?>    
+                        <img src="../image/<?= $fetch_products['image']; ?>" class="image">
+                    <?php } ?>
+                    <div class="status" 
+                        style="color: <?php if ($fetch_products['status']=='
+                        active'){echo "green";} else { echo "red";} ?>;">
+                        <?= $fetch_products['status']; ?></div>
+                    <div class="price">$<?= $fetch_products['price']; ?>/-</div>
+                    <div class="title">$<?= $fetch_products['name']; ?>/-</div>
+                    <div class="flex-btn">
+                        <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" 
+                        class="btn">Editar</a>
+                        <button type="submit" name="delete" class="btn" onclick="return
+                        confirm('delete this product');">Excluir</button>
+                        <a href="read_product.php?post_id=<?= $fetch_products['id']; ?>" 
+                        class="btn">Visualizar produto</a>
+                    </div>
+                          
                 </form>
                 <?php 
                         }
                     }else {
                         echo '
                         <div class="empty">
-                            <p>no product added yet <a href="add_products.php">add produto</a></p>
+                            <p>no product added yet! <br> <a href="add_products.php"
+                                style="margin-top: 1.5rem;">add produto</a></p>
                         </div>
 
                         ';
