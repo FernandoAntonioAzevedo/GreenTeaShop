@@ -414,7 +414,22 @@ header.scrolled a:hover {
     top: 5%;
     font-size: 2rem;
     font-weight: bold;
+    color: var(--green);
 }
+
+.show-post .box-container .box .title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.show-post .box-container .box .flex-btn .btn {
+    width: 33px;
+}
+
+
 
 /* Media Screen */
 @media (max-width: 991px) {

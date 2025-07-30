@@ -53,15 +53,15 @@
                         style="color: <?php if ($fetch_products['status']=='
                         active'){echo "green";} else { echo "red";} ?>;">
                         <?= $fetch_products['status']; ?></div>
-                    <div class="price">$<?= $fetch_products['price']; ?>/-</div>
-                    <div class="title">$<?= $fetch_products['name']; ?>/-</div>
+                    <div class="price">R$<?= $fetch_products['price']; ?>/-</div>
+                    <div class="title"><?= $fetch_products['name']; ?></div>
                     <div class="flex-btn">
                         <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" 
                         class="btn">Editar</a>
                         <button type="submit" name="delete" class="btn" onclick="return
                         confirm('delete this product');">Excluir</button>
                         <a href="read_product.php?post_id=<?= $fetch_products['id']; ?>" 
-                        class="btn">Visualizar produto</a>
+                        class="btn">Visualizar </a>
                     </div>
                           
                 </form>
